@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../../../img/texture.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.formularioTabuadaContainer{
+    border-width: medium;
+    border-style: dashed;
+    border-color: #0abab5;
+    width: 600px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parte-superior{
+    display: flex;
+    flex-direction: row;
+}
+.label-container{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    color: #ffffff;
+    font-size: 1.5rem;
+    gap: 10px;
+}
+.input-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.input-container input{
+    width: 80px;
+    height: 25px;
+}

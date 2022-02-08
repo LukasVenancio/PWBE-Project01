@@ -3,13 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cssHome/home.css">
+    <link rel="stylesheet" href="cssHome/menu.css">
+    <script src="./js/home.js" defer></script>
     <title>HOME</title>
 </head>
 <body>
-    <header>
-    </header>
-    <main>
-        <p>Por favor, selecione o aplicativo desejado no menu!</p>
-    </main>
+    <div id="aviso-container">
+        <p id="aviso">Selecione a aplicação desejada no menu!</p>
+    </div>
+    <div class="menu-burger-container">
+        <i class="menu-burger"></i>
+    </div>
+    <div class="menu">
+        <ul class="dropdown-menu">
+          <li><a href="home.html">Home</a></li>
+          <li>
+            <a href="">Média</a>
+          </li>
+          <li>
+            <a href="">Calculadora</a>
+          </li>
+          <li><a href="./pages/tabuada/tabuada.html">Tabuada</a></li>
+          <li><a href="">Pares e impares</a></li>
+        </ul>
+    </div>    
 </body>
 </html>
