@@ -74,8 +74,8 @@
           <li>
             <a href="">Calculadora</a>
           </li>
-          <li><a href="tabuada.html">Tabuada</a></li>
-          <li><a href="">Pares e impares</a></li>
+          <li><a href="tabuada.php">Tabuada</a></li>
+          <li><a href="../parOuImpar/parOuImpar.php">Pares e impares</a></li>
         </ul>
     </div>    
 </body>
