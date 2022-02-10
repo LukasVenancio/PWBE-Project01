@@ -10,6 +10,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden;
 }
 .formularioTabuadaContainer{
     border-width: medium;
@@ -61,4 +62,5 @@ body{
     border-style: solid;
     border-width: medium;
     border-color: black;
+    overflow-y: scroll;
 }
