@@ -1,14 +1,42 @@
 <?php
+    require_once('../../modolo/config.php');
+    require_once('../../modolo/functions.php');
 
     $numeroInicial = (int) 0;
     $numeroFinal = (int) 500;
-    $option = (string) null;
-    
-    for($numeroInicial; $numeroInicial <= $numeroFinal; $numeroInicial++){
-        $option .= '<option value="' . $numeroInicial . '">'.$numeroInicial.'</option>';
+
+    $resultadoPares = (string) null;
+    $resultadoImpares = (string) null;
+    $contagemPares = (string) null;
+    $contagemImpares = (string) null;
+
+    $acumuladorOptionPares = gerarOptions(0, 500);
+    $acumuladorOptionImpares = gerarOptions(100, 1000);
+
+    if(isset($_POST['btnCalcular'])){
+
+        $numeroInicial = $_POST['numeroInicial'];
+        $numeroFinal = $_POST['numeroFinal'];
+
+        if(!is_numeric($numeroInicial) || !is_numeric($numeroFinal)){
+
+            echo(ERRO_MENSAGEM_ESCOLHER_NUMERO);
+        
+        }else{
+
+            if($numeroInicial >= $numeroFinal){
+                echo(ERRO_MENSAGEM_ORDEM_VALORES);
+            
+            }else{
+                $resultadoPares = definirParesEImpares($numeroInicial, $numeroFinal, 0);
+                $resultadoImpares = definirParesEImpares($numeroInicial, $numeroFinal, 1);
+
+                $contagemPares = contarParesEImpares($numeroInicial, $numeroFinal, 0);
+                $contagemImpares = contarParesEImpares($numeroInicial, $numeroFinal, 1);
+
+            }
+        }
     }
-
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -31,10 +59,11 @@
                 <div class="select-container">
                     <select name="numeroInicial" id="">
                         <option value="selecioneUmNumeroInicial">Selecione um número</option>
-                        <?=$option?>
+                        <?=$acumuladorOptionPares?>
                     </select>
                     <select name="numeroFinal" id="">
                         <option value="selecioneUmNumeroFinal">Selecione um número</option>
+                        <?=$acumuladorOptionImpares?>
                     </select>
                 </div>
                 <input type="submit" value="Calcular" name="btnCalcular" class="btnCalcular">
@@ -43,13 +72,13 @@
         <div class="container-resultados">
             <div class="container-total-pares">
                 <p class="p-label">Números pares:</p>
-                <div class="container-pares"></div>
-                <p>Quantidade de pares:</p>
+                <div class="container-pares"><?=$resultadoPares?></div>
+                <p>Quantidade de pares: <?=$contagemPares?></p>
             </div>
             <div class="container-total-impares">
                 <p class="p-label">Números impares: </p>
-                <div class="container-impares"></div>
-                <p>Quantidade de impares:</p>
+                <div class="container-impares"><?=$resultadoImpares?></div>
+                <p>Quantidade de impares: <?=$contagemImpares?></p>
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
 <?php
 
-    require_once('./modulo/config.php');
-    require_once('./modulo/functions.php');
+  require_once('../../modolo/config.php');
+  require_once('../../modolo/functions.php');
 
     $multiplicando = (int) 0;
     $maximoMultiplicador = (int) 0;
