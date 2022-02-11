@@ -1,3 +1,13 @@
+*{
+    text-decoration: none;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../../../img/texture.jpg);
+    text-decoration: none;
+}
 #conteudo{
     width: 400px;
     height: 300px;
@@ -5,6 +15,7 @@
     margin-right: auto;
     border: solid 1px #000000;
     text-align: center;
+    background-color: #0abab5;
    
 }
 
@@ -19,6 +30,7 @@
     font-family: verdana;
     word-spacing: 5px;
     letter-spacing: 3px;
+
 }
 
 #form{
@@ -26,6 +38,7 @@
     height: 185px;
     padding-top: 20px;
     box-sizing: border-box;
+    background-color: #0abab5;
 }
 
 input{
@@ -50,4 +63,5 @@ input{
     height: 50px;
     float: left;
     text-align: left;
+    background-color: #0abab5;
 }
