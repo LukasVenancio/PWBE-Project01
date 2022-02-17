@@ -2,16 +2,13 @@
     require_once('../../modolo/config.php');
     require_once('../../modolo/functions.php');
 
-    $numeroInicial = (int) 0;
-    $numeroFinal = (int) 500;
-
     $resultadoPares = (string) null;
     $resultadoImpares = (string) null;
     $contagemPares = (string) null;
     $contagemImpares = (string) null;
 
-    $acumuladorOptionPares = gerarOptions(0, 500);
-    $acumuladorOptionImpares = gerarOptions(100, 1000);
+    $acumuladorOptionPrimeiroSelect = gerarOptions(0, 500);
+    $acumuladorOptionSegundoSelect = gerarOptions(100, 1000);
 
     if(isset($_POST['btnCalcular'])){
 
@@ -59,11 +56,11 @@
                 <div class="select-container">
                     <select name="numeroInicial" id="">
                         <option value="selecioneUmNumeroInicial">Selecione um número</option>
-                        <?=$acumuladorOptionPares?>
+                        <?=$acumuladorOptionPrimeiroSelect?>
                     </select>
                     <select name="numeroFinal" id="">
                         <option value="selecioneUmNumeroFinal">Selecione um número</option>
-                        <?=$acumuladorOptionImpares?>
+                        <?=$acumuladorOptionSegundoSelect?>
                     </select>
                 </div>
                 <input type="submit" value="Calcular" name="btnCalcular" class="btnCalcular">
@@ -89,10 +86,10 @@
         <ul class="dropdown-menu">
           <li><a href="../../home.html">Home</a></li>
           <li>
-            <a href="">Média</a>
+            <a href="../media/media.php">Média</a>
           </li>
           <li>
-            <a href="">Calculadora</a>
+            <a href="../calculadora/calculadora_simples.php">Calculadora</a>
           </li>
           <li><a href="../tabuada/tabuada.php">Tabuada</a></li>
           <li><a href="parOuImpar.php">Pares e impares</a></li>

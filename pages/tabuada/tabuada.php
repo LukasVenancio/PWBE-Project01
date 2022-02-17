@@ -69,10 +69,10 @@
         <ul class="dropdown-menu">
           <li><a href="../../home.html">Home</a></li>
           <li>
-            <a href="">Média</a>
+            <a href="../media/media.php">Média</a>
           </li>
           <li>
-            <a href="">Calculadora</a>
+            <a href="../calculadora/calculadora_simples.php">Calculadora</a>
           </li>
           <li><a href="tabuada.php">Tabuada</a></li>
           <li><a href="../parOuImpar/parOuImpar.php">Pares e impares</a></li>
